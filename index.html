@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Invitación de Boda</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #fffbe6 0%, #f9e7c4 100%);
+            color: #6d4c1b;
+            min-height: 100vh;
+            transition: background-image 0.8s;
+        }
+
+        .background-img {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            background-size: cover;
+            background-position: center;
+            opacity: 0.18;
+            transition: background-image 0.8s;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 2rem auto;
+            background: rgba(255, 255, 255, 0.92);
+            border-radius: 18px;
+            box-shadow: 0 8px 32px rgba(212, 175, 55, 0.18);
+            padding: 2.5rem 1.5rem;
+            border: 2px solid #d4af37;
+            position: relative;
+        }
+
+        .gold-title {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.7rem;
+            color: #d4af37;
+            text-align: center;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 2px 8px #fffbe6;
+        }
+
+        .divider {
+            border: none;
+            border-top: 2px solid #d4af37;
+            margin: 1.5rem 0;
+            width: 60%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .names {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.2rem;
+            color: #bfa14a;
+            text-align: center;
+            margin: 0.8rem 0;
+        }
+
+        .details {
+            font-size: 1.1rem;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .golden-box {
+            border: 1.5px solid #d4af37;
+            border-radius: 12px;
+            background: rgba(255, 248, 220, 0.7);
+            padding: 1rem;
+            margin: 1.2rem 0;
+            text-align: center;
+            font-size: 1.05rem;
+            color: #7a5b1e;
+        }
+
+        .rsvp-btn {
+            display: block;
+            margin: 2rem auto 0 auto;
+            background: linear-gradient(90deg, #d4af37 0%, #fffbe6 100%);
+            color: #6d4c1b;
+            border: none;
+            border-radius: 24px;
+            padding: 0.8rem 2.5rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
+            box-shadow: 0 2px 8px #d4af3722;
+            cursor: pointer;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .rsvp-btn:hover {
+            background: linear-gradient(90deg, #fffbe6 0%, #d4af37 100%);
+            color: #bfa14a;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 1.2rem 0.5rem;
+                max-width: 98vw;
+            }
+
+            .gold-title {
+                font-size: 2rem;
+            }
+
+            .names {
+                font-size: 1.5rem;
+            }
+
+            .details,
+            .golden-box {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background-img" id="bgimg"></div>
+    <div class="container">
+        <div class="gold-title">¡Nos Casamos!</div>
+        <hr class="divider">
+        <div class="names">Valeria &amp; Alejandro</div>
+        <div class="details">
+            Con gran alegría, invitamos cordialmente a usted y su familia a celebrar nuestra unión matrimonial.<br>
+            <b>Fecha:</b> 15 de Octubre de 2024<br>
+            <b>Hora:</b> 6:00 PM<br>
+            <b>Lugar:</b> Hacienda El Paraíso, Av. Dorada 123, Ciudad Bella
+        </div>
+        <div class="golden-box">
+            <b>Recepción</b><br>
+            Después de la ceremonia, acompáñanos a una elegante recepción con cena, música y baile.<br>
+            <b>Código de vestimenta:</b> Formal, tonos dorados o neutros sugeridos.
+        </div>
+        <div class="golden-box">
+            <b>Confirmación de asistencia</b><br>
+            Por favor confirma tu asistencia antes del 1 de Octubre.<br>
+            <a href="mailto:valeyalejandroboda@email.com"
+                style="color:#d4af37;text-decoration:underline;">valeyalejandroboda@email.com</a>
+        </div>
+        <div class="golden-box">
+            <b>Regalos</b><br>
+            Tu presencia es nuestro mejor regalo, pero si deseas obsequiarnos algo, hemos preparado una mesa de regalos
+            en <a href="https://www.liverpool.com.mx" target="_blank"
+                style="color:#d4af37;text-decoration:underline;">Liverpool</a>.
+        </div>
+        <form action="https://formsubmit.co/avina2097@gmail.com" method="POST">
+            <input type="text" name="nombre" placeholder="Tu nombre" required />
+            <input type="email" name="email" placeholder="Tu correo" required />
+            <button type="submit" class="rsvp-btn">Confirmar Asistencia</button>
+        </form>
+        
+    </div>
+    <script>
+        // Lista de imágenes elegantes (puedes cambiar las URLs por las tuyas)
+        const images = [
+            'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80',
+            'https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=800&q=80',
+            'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=800&q=80',
+            'https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=800&q=80'
+        ];
+        let lastIndex = 0;
+        function setBg(index) {
+            document.getElementById('bgimg').style.backgroundImage = `url('${images[index]}')`;
+        }
+        setBg(0);
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY;
+            const idx = Math.min(images.length - 1, Math.floor(scrollY / 200) % images.length);
+            if (idx !== lastIndex) {
+                setBg(idx);
+                lastIndex = idx;
+            }
+        });
+    </script>
+</body>
+
+</html>
