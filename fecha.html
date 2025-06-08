@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Fecha en Tiempo Real</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background: #18120d;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Segoe UI', 'Arial', sans-serif;
+        }
+        .fecha-container {
+            background: rgba(30, 20, 10, 0.95);
+            border-radius: 24px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+            padding: 40px 60px;
+            border: 2px solid #d4af37;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 320px;
+        }
+        .fecha-titulo {
+            font-size: 2.2rem;
+            color: #d4af37;
+            letter-spacing: 2px;
+            margin-bottom: 18px;
+            font-weight: 700;
+            text-shadow: 0 2px 8px #0008;
+        }
+        .fecha-tiempo {
+            font-size: 2.8rem;
+            color: #fff;
+            font-weight: 600;
+            letter-spacing: 3px;
+            margin-bottom: 8px;
+            text-shadow: 0 2px 8px #d4af3744;
+        }
+        .fecha-detalle {
+            font-size: 1.2rem;
+            color: #d4af37;
+            letter-spacing: 1px;
+            font-style: italic;
+            margin-top: 6px;
+        }
+        .gold-divider {
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #fff0 0%, #d4af37 50%, #fff0 100%);
+            border-radius: 2px;
+            margin: 18px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="fecha-container">
+        <div class="fecha-titulo">Fecha y Hora Actual</div>
+        <div class="gold-divider"></div>
+        <div class="fecha-tiempo" id="fechaTiempo"></div>
+        <div class="fecha-detalle" id="fechaDetalle"></div>
+    </div>
+    <script>
+        function actualizarFecha() {
+            const meses = [
+                "enero", "febrero", "marzo", "abril", "mayo", "junio",
+                "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"
+            ];
+            const dias = [
+                "domingo", "lunes", "martes", "miércoles", "jueves", "viernes", "sábado"
+            ];
+            const ahora = new Date();
+            const diaSemana = dias[ahora.getDay()];
+            const dia = ahora.getDate();
+            const mes = meses[ahora.getMonth()];
+            const año = ahora.getFullYear();
+            const horas = ahora.getHours().toString().padStart(2, '0');
+            const minutos = ahora.getMinutes().toString().padStart(2, '0');
+            const segundos = ahora.getSeconds().toString().padStart(2, '0');
+
+            document.getElementById('fechaTiempo').textContent = `${horas}:${minutos}:${segundos}`;
+            document.getElementById('fechaDetalle').textContent = `${diaSemana}, ${dia} de ${mes} de ${año}`;
+        }
+        actualizarFecha();
+        setInterval(actualizarFecha, 1000);
+    </script>
+</body>
+</html>

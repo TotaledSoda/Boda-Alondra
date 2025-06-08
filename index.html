@@ -7,6 +7,8 @@
     <title>Invitación de Boda</title>
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;700&display=swap"
         rel="stylesheet">
+
+        <link rel="stylesheet" href="fecha.html">
     <style>
         body {
             margin: 0;
@@ -33,7 +35,7 @@
         .container {
             max-width: 500px;
             margin: 2rem auto;
-            background: rgba(255, 255, 255, 0.92);
+            background: none;
             border-radius: 18px;
             box-shadow: 0 8px 32px rgba(212, 175, 55, 0.18);
             padding: 2.5rem 1.5rem;
@@ -109,6 +111,9 @@
             .container {
                 padding: 1.2rem 0.5rem;
                 max-width: 98vw;
+                margin: 1rem 0.5rem;
+                box-shadow: none;
+                border-width: 1px;
             }
 
             .gold-title {
@@ -156,11 +161,70 @@
             en <a href="https://www.liverpool.com.mx" target="_blank"
                 style="color:#d4af37;text-decoration:underline;">Liverpool</a>.
         </div>
-        <form action="https://formsubmit.co/avina2097@gmail.com" method="POST">
-            <input type="text" name="nombre" placeholder="Tu nombre" required />
-            <input type="email" name="email" placeholder="Tu correo" required />
+        <form action="https://formsubmit.co/avina2097@gmail.com" method="POST" class="rsvp-form">
+            <div class="form-group">
+                <input type="text" name="nombre" placeholder="Tu nombre" required />
+            </div>
+            <div class="form-group">
+                <input type="email" name="email" placeholder="Tu correo" required />
+            </div>
             <button type="submit" class="rsvp-btn">Confirmar Asistencia</button>
         </form>
+        <style>
+            .rsvp-form {
+                margin-top: 2rem;
+                background: rgba(255, 248, 220, 0.85);
+                border: 1.5px solid #d4af37;
+                border-radius: 14px;
+                padding: 1.5rem 1rem;
+                box-shadow: 0 2px 12px #d4af3722;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 1.2rem;
+            }
+            .rsvp-form .form-group {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+            .rsvp-form input[type="text"],
+            .rsvp-form input[type="email"] {
+                width: 90%;
+                padding: 0.7rem 1rem;
+                border: 1.5px solid #d4af37;
+                border-radius: 8px;
+                font-size: 1.05rem;
+                font-family: 'Montserrat', sans-serif;
+                background: #fffbe6;
+                color: #6d4c1b;
+                outline: none;
+                transition: border 0.3s, box-shadow 0.3s;
+                box-shadow: 0 1px 4px #d4af3722;
+            }
+            .rsvp-form input[type="text"]:focus,
+            .rsvp-form input[type="email"]:focus {
+                border: 2px solid #bfa14a;
+                box-shadow: 0 2px 8px #d4af3722;
+            }
+            .rsvp-form .rsvp-btn {
+                width: 70%;
+                margin-top: 0.5rem;
+            }
+            @media (max-width: 600px) {
+                .rsvp-form {
+                    padding: 1rem 0.2rem;
+                }
+                .rsvp-form .rsvp-btn {
+                    width: 100%;
+                }
+                .rsvp-form input[type="text"],
+                .rsvp-form input[type="email"] {
+                    width: 98%;
+                    font-size: 1rem;
+                }
+            }
+        </style>
         
     </div>
     <script>
@@ -185,6 +249,9 @@
             }
         });
     </script>
+
+    
+    </div>
 </body>
 
 </html>
